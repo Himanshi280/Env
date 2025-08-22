@@ -36,11 +36,12 @@ jobs:
         
       - name: Deploying the infrastructure
         working-directory: ${{ env.working-directory }}
-        run: |
-          terraform init
-          terraform plan
-          env:
+        env:
           TF_VAR_newrelic_account_id: ${{ secrets.NEWRELIC_ACCOUNT_ID }}
           TF_VAR_newrelic_api_key: ${{ secrets.NEWRELIC_API_KEY }}
           TF_VAR_newrelic_region: US
+        run: |
+          terraform init
+          terraform plan
+          
           # terraform apply --auto-approve
