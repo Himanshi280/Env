@@ -1,0 +1,46 @@
+name: Terraform apply
+
+on:
+  workflow_dispatch:     
+  push:
+    branches:
+      - main
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    
+    env:
+      working-directory: ./
+
+       
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up mise
+        uses: jdx/mise-action@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8.15.4
+
+      - name: Install tools via mise
+        run: mise install
+        # shell: bash
+        working-directory: ${{ env.working-directory }}  
+  
+      # - name: Setting up Terraform
+      #   uses: hashicorp/setup-terraform@v2
+        
+      - name: Deploying the infrastructure
+        working-directory: ${{ env.working-directory }}
+        run: |
+          terraform init
+          terraform plan
+          env:
+          TF_VAR_newrelic_account_id: ${{ secrets.NEWRELIC_ACCOUNT_ID }}
+          TF_VAR_newrelic_api_key: ${{ secrets.NEWRELIC_API_KEY }}
+          TF_VAR_newrelic_region: US
+          # terraform apply --auto-approve
