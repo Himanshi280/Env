@@ -5,11 +5,7 @@ terraform {
       source = "newrelic/newrelic"
       version = "~>3.43" # pick latest from registry
     }
-    #  aws = {
-    #   source  = "hashicorp/aws"
-    #   version = "~>5.0"
-    # }
-    # required_version = ">= 1.9.0"
+
   }
 }
 
@@ -19,6 +15,3 @@ provider "newrelic"{
   api_key    = var.newrelic_api_key # Usually prefixed with 'NRAK'
   region     = "US"                               # Valid regions are US and EU
 }
-# provider "aws"{
-#   region = "ap-south-1"
-# }

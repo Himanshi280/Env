@@ -9,7 +9,7 @@ variable "dashboard" {
 }
 
 variable "newrelic_account_id" {
-  
+  type = any
 }
 
 variable "newrelic_api_key" {
