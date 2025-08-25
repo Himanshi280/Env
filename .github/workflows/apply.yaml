@@ -62,9 +62,12 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-          
+
       - name: Install dependencies
         run: pnpm install
+
+      - name: Install Changesets CLI
+        run: pnpm add -D @changesets/cli  
 
       - name: Run Changesets
         run: |
