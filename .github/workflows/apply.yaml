@@ -73,6 +73,9 @@ jobs:
           git commit -m "ci: version bump from changeset"
           git push
 
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}  
+
   # version:
   #   needs : create 
   #   runs-on: ubuntu-latest
