@@ -4,5 +4,8 @@
   "private": true,
   "scripts": {
     "changeset": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.6"
   }
 }
