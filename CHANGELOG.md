@@ -1,5 +1,11 @@
 # terraform-nr-dashboard-pipeline
 
+## 2.0.0
+
+### Major Changes
+
+- 213e4d0: sum
+
 ## 1.0.1
 
 ### Patch Changes
