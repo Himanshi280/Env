@@ -47,6 +47,7 @@ jobs:
           # terraform apply --auto-approve
 
   version:
+    needs : create 
     runs-on: ubuntu-latest
 
     steps:
