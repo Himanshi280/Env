@@ -71,6 +71,10 @@ jobs:
       - name: Install Changesets CLI
         run: pnpm add -D @changesets/cli  
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+  
+
       - name: Run Changesets
         run: |
           pnpm changeset version
