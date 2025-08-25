@@ -1,12 +1,11 @@
 {
   "name": "terraform-nr-dashboard-pipeline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "changeset": "changeset"
   },
-  "dependencies": {
-  "@changesets/cli": "^2.29.6"
-}
-
+  "devDependencies": {
+    "@changesets/cli": "^2.29.6"
+  }
 }

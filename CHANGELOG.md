@@ -1,5 +1,11 @@
 # terraform-nr-dashboard-pipeline
 
+## 1.0.1
+
+### Patch Changes
+
+- 48e1697: 5464684121245456
+
 ## 1.0.0
 
 ### Major Changes
