@@ -1,6 +1,6 @@
 {
   "name": "terraform-nr-dashboard-pipeline",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "changeset": "changeset"
