@@ -71,13 +71,13 @@ jobs:
       - name: Install Changesets CLI
         run: pnpm add -D @changesets/cli  
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      # - name: Install dependencies
+      #   run: pnpm install --frozen-lockfile
   
 
       - name: Run Changesets
         run: |
-          pnpm exec changeset version
+          pnpm changeset version
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
