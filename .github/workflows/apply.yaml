@@ -87,5 +87,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}  
 
-        
+      - name: Install Trivy
+        uses: aquasecurity/trivy-action@0.20.0
+        with:
+          scan-type: 'config'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          severity: 'HIGH,CRITICAL'   
 

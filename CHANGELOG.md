@@ -1,5 +1,11 @@
 # terraform-nr-dashboard-pipeline
 
+## 3.0.1
+
+### Patch Changes
+
+- eb40565: hjndmqwd
+
 ## 3.0.0
 
 ### Major Changes
