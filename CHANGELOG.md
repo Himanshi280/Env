@@ -1,5 +1,15 @@
 # terraform-nr-dashboard-pipeline
 
+## 3.0.0
+
+### Major Changes
+
+- 8b829e8: hjbkjcq
+
+### Minor Changes
+
+- d251a77: minor again
+
 ## 2.0.0
 
 ### Major Changes
